@@ -63,8 +63,7 @@ public class Stepdefs {
 	@Then("Alex can do successful login")
 	public void alex_can_do_successful_login() {
 		Assert.assertTrue(driver.getTitle().contains("Home"));
-
-	}
+}
 
 
 	@When("user searches the below product:")
@@ -89,17 +88,9 @@ public class Stepdefs {
 	}
 	@Then("available products should be added to cart")
 	public void available_products_should_be_added_to_cart() {
-
-		WebElement  countofProducts =driver.findElement(By.xpath("//*[@id='header']/div[1]/div/div/div[2]/div/a[2]/b"));
+WebElement  countofProducts =driver.findElement(By.xpath("//*[@id='header']/div[1]/div/div/div[2]/div/a[2]/b"));
 		String countProducts = countofProducts.getText();
 		int  countProductsInInt = Integer.parseInt(countProducts);
 		Assert.assertEquals(numberOfProducts, countProductsInInt);
 	}
-
-
-
-
-
-
-
 }
